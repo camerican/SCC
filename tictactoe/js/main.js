@@ -30,9 +30,24 @@ $(document).on("ready",function(){
     } else { //else, notify the user
       $("#message").html('Sorry, square is full!');
     }
-    
+
+    //to do: check if a player has won
+
+    //else, check if game is over by a draw
+    if( checkFull() ) {
+      $("#message").html("Sorry, the game has ended.");
+      $("#board").fadeOut();
+    }  
+
+
   });
 });
+
+function checkFull(){
+  return $(".square").filter(function(x,y){
+    return y.innerHTML.length > 0;
+  }).length >= 9;
+}
 //$(document).ready()
   
 //$(".square").click() // this is short hand
