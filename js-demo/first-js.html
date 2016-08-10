@@ -1,12 +1,60 @@
-<!DOCTYPE html>
+   html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>Our First JavaScript</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+$(document).on('ready',function(){
+  // jQuery("h1").html("Hello!");
+  // $("ol.interests").addClass('active');
+  //   $("ol").append("<li>Else</li>");
+
+  $("#doSomething").on('click',function(){
+    $("body").toggleClass("active");
+  });
+  $("#doSomething").on('click',makeActive);
+  $("#button2").click(makeActive);
+  // This is a short-hand method for on('click')
+  // $("#doSomething").click(function(){
+
+  // });
+});
+  function makeActive() {
+    $("body").toggleClass("active");
+  }
+  var makeActive = function() {
+
+  }
+function sayHello( name, callback ) { 
+  console.log("Hello " + name);
+  console.log( callback(2,3) );
+}
+
+var multiply2 = function( a, b ) {
+  console.log(a, b);
+  return a * b 
+}
+  </script>
+  <style type="text/css">
+    .active {
+      background-color: red;
+      font-weight: bold;
+    }
+    ol.interests {
+
+    }
+  </style>
 </head>
 <body>
 <h1>Our First JavaScript</h1>
-<ol class="interests"></ol>
-<script src="js/first.js"></script>
+<ol class="interests">
+  <li>Something</li>
+</ol>
+  <button id="doSomething">Click Me</button>
+  <button id="button2">I'm a button too</button>
+<!--load js scripts here-->
+
+<!-- <script src="js/first.js"></script> -->
 </body>
 </html>
