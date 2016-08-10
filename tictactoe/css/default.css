@@ -11,14 +11,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 #status {
   background-color:rgba(255,200,200,0.5);
-  width: 602px;
+  width: 606px;
   border: 4px dashed orange;
   padding: 1em;
   margin: 1em 0;
   display: inline-block;
 }
 #board {
-  width:602px;
+  width:606px;
   height:602px;
   font-size: 0;
   border: 1px solid grey;
