@@ -55,6 +55,22 @@ function prioritize( weight ) {
 console.log( prioritize() );
 
 
+// LightBox controls....
+$(document).on("ready",function(){
+  $("#lightbox button").on("click",function(){
+    //we want to close the lightbox
+    $("body").removeClass("overlay");
+    // $("#lightbox").slideUp(4000,function(){
+    //   $("body").removeClass("overlay");
+    // });
+  });
+
+  $("h1").on("click",function(){
+    $("body").addClass("overlay");
+  });
+});
+
+
 
 
 
