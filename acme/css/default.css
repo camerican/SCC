@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  color: grey;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+}
+nav {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+article img {
+  display: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+@media all and (min-width: 700px) {
+  article img {
+    display: block;
+    width: 100%;
+  }
+  article {
+    font-size: 0;
+  }
+  article > * {
+    font-size: 16px;
+  }
+  header {
+    position: relative;
+  }
+  nav {
+    position: absolute;
+    right: 13px;
+    top: 27px;
+  }
+  nav li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  nav li:hover {
+    color: darkgrey;
+    cursor: pointer;
+  }
+  article section {
+    display: inline-block;
+    width: 50%;
+  }
+/* nth-child would only be helpful if 
+  we can guarantee the order of each of 
+   the items.  Because the anvil lives 
+   with our sections, it's not going to
+   be reliable here */
+/*  article section:nth-child(2) {
+    background-color:red;
+  }*/
+  article section.left {
+    padding-right: 7px;
+  }
+  article section.right {
+    padding-left: 7px;
+  }
+}
+
+
+
+
+
