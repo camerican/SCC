@@ -1,0 +1,96 @@
+main {
+  width: 80%;
+  background-color: rgb(200,30,100);
+  min-height: 100px;
+  text-align:center;
+}
+
+.box {
+  background-color: rgba(150,150,30,0.8);
+  width: 180px;
+  height: 120px;
+  /*float: right;*/
+  border: 3px dashed #000;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align:center;
+ /* vertical-align: middle;*/
+ padding-top: 80px;
+ display:inline-block;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.jump {
+  clear: right;
+}
+
+.large {
+  font-size: 3em;
+}
+
+figure {
+  float: left;
+  width:300px;
+}
+figure img,
+figure figcaption {
+  width:100%;
+}
+
+.experiment {
+  background-color:lightblue;
+  float: left;
+  width: 200px;
+  clear: left;
+}
+
+p.first {
+  position:relative;
+  background-color: pink;
+}
+
+.demo {
+  background-color: orange;
+  position: fixed;
+  left: 20px;
+  top: 10px;
+}
+#overlay {
+  position:fixed;
+  background-color:rgba(0,0,0,0.80);
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 2;
+  display: none;
+}
+.dialog {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left:20%;
+  top: 30%;
+  background-color: lightblue;
+  border: 2px solid blue;
+}
+
+.img1 {
+  background-image: url('../img/1.jpeg');
+}
+.img2 {
+  background-image: url('../img/2.jpeg');
+}
+.img3 {
+  background-image: url('../img/3.jpg');
+}
+.img4 {
+  background-image: url('../img/4.jpg');
+}
+
+
+
