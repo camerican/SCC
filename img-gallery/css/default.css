@@ -92,5 +92,20 @@ p.first {
   background-image: url('../img/4.jpg');
 }
 
-
+@media (max-width: 400px) {
+  body {
+    margin: 0;
+  }
+  main {
+    width: auto;
+    padding: 7px;
+  }
+  .box {
+    width: 95vw;
+    height: 63vw;
+    font-size: 20vw;
+    color: #fff;
+    border: 2px solid yellow;
+  }
+}
 
