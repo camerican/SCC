@@ -56,6 +56,18 @@ main {
   background-color: purple;
 }
 
+.emph {
+  color: red;
+}
+i.emph:hover {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+.emph:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
 @media all and (max-width: 650px) {
   h1, nav, nav li {
     display:block;

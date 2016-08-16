@@ -3,7 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <title>Media Query Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"></link>
+  <link rel="stylesheet" href="css/fontello.css"></link>
   <link rel="stylesheet" href="css/default.css"></link>
+  <script>
+  // $(".emph").on('hover',function(){
+  //   $(this).addClass('fa-spin');
+  // });
+  var car = {
+    "brand": "Ford",
+    "type": "Truck",
+    "model": "F150",
+    "price": 15000
+  };
+  $(document).ready(function(){
+    $.ajax({
+      type: "POST",
+      url: "http://someserver.com/request",
+      data: {person: "wpadvanced"},
+      success: function(data) {
+        $("#car").html(data.brand);
+      }
+    });
+
+    $("#go").on("click",function(){
+      $.ajax({
+        type: "GET",
+        url: "https://api.spotify.com/v1/search",
+        data: {
+          q: $("#search").val(),
+          type: "artist"
+        }, 
+        success: function( data ) {
+          //console.log( data );
+          $("#artist").attr('src', data.artists.items[0].images[0].url);
+          $("#followers").html(data.artists.items[0].followers.total)
+        }
+      });
+    });
+
+    
+
+
+
+
+    artists.items[0].followers.total
+    artists.items[0].images[0].url
+     // $("#car").html(car.brand);
+  });
+ 
+ 
+
+  </script>
 </head>
 <body>
   <header>
@@ -16,8 +68,33 @@
     </nav>
   </header>
   <main>
-    <div id="column-left" class="column">Column 1</div>
-    <div id="column-right" class="column">Column 2</div>
+    <div id="column-left" class="column">Column 1
+      <!-- <i class="icon-wpadvanced"></i> -->
+      Search for: <input id="search"></input>
+      <button id="go">Go Find Them!</button>
+      <p>WP Advanced ghost particularly loves this artist:</p>
+
+      <img id="artist" width="400" />
+
+      <p>Not only that, but <span id="followers"></span> people agree.</p>
+
+    <i class="fa emph fa-ban fa-3x"></i>
+
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-square-o fa-stack-2x"></i>
+      <i class="fa fa-vine fa-stack-1x"></i>
+    </span>
+
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+    </span>
+
+    </div>
+    <div id="column-right" class="column">
+      <p>The WP Advanced ghost prefers to drive a <span id="car">some car</span>.
+      <img width="200" src="img/wpadvanced.svg" />
+    </div>
   </main>
   <footer>&copy; 2016</footer>
 </body>
