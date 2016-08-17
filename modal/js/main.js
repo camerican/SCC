@@ -26,12 +26,7 @@ $(document).ready(function(){
 
     } else if( $(this).hasClass("no") ) {  // clicked on "no" 
       window.location = "http://rubytuesday.com";
-    } else {
-      // do nothing... user just closed dialog
     }
   });
-  // $(".yes").click(function(e){
-
-  // })
-
+ 
 });
