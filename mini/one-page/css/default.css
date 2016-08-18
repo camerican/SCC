@@ -15,7 +15,10 @@ body {
   border-radius: 8px;
   background-color: rgba(50,25,25,0.75);
 }
-
+#social_media.sticky {
+  position: fixed;
+  top: 80px;
+}
 /* Header Content */
 #logo {
   width:200px;
