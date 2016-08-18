@@ -1,0 +1,48 @@
+.circle {
+  width:200px;
+  height:200px;
+  background-color: blue;
+  border-radius: 100px;
+}
+#circle1 {
+  position:fixed;
+  left:0;
+  top:0;
+  -webkit-animation: right-to-bottom 7s infinite linear;
+  animation: right-to-bottom 7s infinite linear;
+}
+@-webkit-keyframes right-to-bottom {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  33% {
+    left: 500px;
+    top:0;
+  }
+  66% {
+    left: 500px;
+    top: 500px;
+  }
+  100% {
+    left:0;
+    top:0;
+  }
+}
+@keyframes right-to-bottom {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  33% {
+    left: 500px;
+    top:0;
+  }
+  66% {
+    left: 500px;
+    top: 500px;
+  }
+  100% {
+    left:0;
+    top:0;
+  }
