@@ -64,7 +64,9 @@ main {
   width: 800px;
   display:inline-block;
 }
-
+.link {
+  cursor: pointer;
+}
 
 
 
