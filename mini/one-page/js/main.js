@@ -12,6 +12,12 @@ $(document).on("ready",function(){
       // $("#social_media").css("top","80px");
       $("#social_media").addClass("sticky");
     }
+    if( window.scrollY < 603 ) {
+      $("header").css("background-color","rgba(50,25,25,0.75)");
+    } else {
+      $("header").css("background-color","rgba(0,0,0,1)");
+    }
+
   });
 
   $(".link").on("click",function(e){
