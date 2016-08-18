@@ -1,0 +1,67 @@
+body {
+  margin: 80px 0 0 0;
+  font-size: 20px;
+  text-align:center;
+}
+/* Social Media Bar */
+#social_media {
+  position: absolute;
+  color: #fff; /* white */
+  left: 20px;
+  top: 400px;
+  width: 50px;
+  height: 80px;
+  border: 2px solid #000; /* black */
+  border-radius: 8px;
+  background-color: rgba(50,25,25,0.75);
+}
+
+/* Header Content */
+#logo {
+  width:200px;
+  height:60px;
+  background-color: orange;
+}
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 60px;
+  background-color: rgba(50,25,25,0.75);
+  text-align: center;
+}
+header section {
+  position: relative;
+  width:800px;
+  display: inline-block;
+}
+nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+}
+nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+nav li a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+/** Main Content **/
+
+main {
+  text-align: left;
+  width: 800px;
+  display:inline-block;
+}
+
+
+
+
