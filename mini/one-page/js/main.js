@@ -1,4 +1,34 @@
+var transition = 1;
+
 $(document).on("ready",function(){
+
+  // jQuery carousel...  get the .splash
+  // images to show in a cycle...
+  setInterval(function(){
+    var fadeDuration = 4000;
+    if( transition == 1 ) {
+      // transition from 1 to 2
+      $("#splash1").fadeOut(fadeDuration);
+      $("#splash2").fadeIn(fadeDuration);
+    } else if( transition == 2 ) {
+      // transition from 2 to 3
+      $("#splash2").fadeOut(fadeDuration);
+      $("#splash3").fadeIn(fadeDuration);
+    } else if( transition == 3 ) {
+      // transition from 3 to 1
+      $("#splash3").fadeOut(fadeDuration);
+      $("#splash1").fadeIn(fadeDuration);
+    }
+    transition += 1;
+    if( transition > 3 ) {
+      transition = 1;
+    }
+  },5000);
+
+
+
+
+
   $(window).on("scroll",function(){
     // Let's check to see whether we are
     // < 320px scrollY or greater...
