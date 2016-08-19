@@ -1,0 +1,16 @@
+body {
+  width:80%;
+  margin:0 auto;
+}
+#p1 {
+  background-color: rgba(255,0,0,0.1);
+}
+#p2 {
+  background-color: rgba(0,0,255,0.1);
+}
+.btn-nycda {
+  background-color: purple;
+}
+.btn-nycda:hover {
+  background-color: violet;
+}
