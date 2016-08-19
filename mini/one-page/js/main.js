@@ -40,10 +40,10 @@ function startCarousel() {
   if( intervalId ) {
     clearInterval(intervalId);
   }
-  // intervalId = setInterval(function(){
-  //   goToSlideNumber(currentSlide+1);
-  // },5000);
-  intervalId = setInterval(goToSlideNumber,5000,currentSlide+1);
+  intervalId = setInterval(function(){
+    goToSlideNumber(currentSlide+1);
+  },5000);
+  // intervalId = setInterval(goToSlideNumber,5000,currentSlide+1);
 }
 
 $(document).on("ready",function(){
