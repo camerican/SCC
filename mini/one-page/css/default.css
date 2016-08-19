@@ -58,7 +58,19 @@ nav li a {
   font-weight: bold;
   text-decoration: none;
 }
-/** Splash Image **/
+/** Splash Images **/
+.arrow-left {
+  position: absolute;
+  left:50px;
+  top: 300px;
+  cursor: pointer;
+}
+.arrow-right {
+  position: absolute;
+  right: 50px;
+  top: 300px;
+  cursor: pointer;
+}
 /*
 image 1: http://wallpapercave.com/wp/Q2rBVQe.jpg
 image 2: http://animal-dream.com/data_images/dolphin/dolphin8.jpg
