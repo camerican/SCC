@@ -1,0 +1,67 @@
+/* Define general properties here for all our elements
+   in the gallery */
+.picture_frame {
+  width:300px;
+  height:200px;
+  /* Make frame non-static so we can position our h3 inside */
+  position: relative;
+}
+.picture_frame::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  -webkit-filter: grayscale(0%);
+  filter:grayscale(0%);
+  /* Transition will stretch any CSS changes over 1/2 second */
+  transition: 0.5s ease-in-out;
+}
+/* Any h3 that is inside a .picture_frame */
+.picture_frame h3 {
+  margin: 0;
+  padding: 6px;
+
+  /* via absolute positioning, we can move our label to
+     the bottom of the .picture frame... stretching from
+     the left (0) to the right (0) */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align:center;
+  /* and we can turn on a little background effect */
+  background-color: rgba(40,40,40,0.4);
+}
+
+/* on hover, we can activate our greyscale feature */
+.picture_frame:hover::before {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* this selector targets everything (*) inside of a
+   .picture frame...  we'll use the same transition delay
+   and hide everything by setting its opacity to 0 */
+.picture_frame * {
+  color: orange;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+/* when we hover over a .picture_frame, we want everything
+   inside of it to now be visible (opacity = 1) and we'll
+   deactivate any greyscale effects */
+.picture_frame:hover * {
+  -webkit-filter: grayscale(0%);
+  filter:grayscale(0%);
+  opacity: 1;
+}
+
+/* Define specific images to load as backgrounds...
+   Because we're loading as IDs, the assumption is
+   that there will be only one per page */
+
+#croissant::before {
+  background-image: url(http://maison-parisienne.com/wp-content/uploads/2015/04/croissant-french.jpg);
+}
