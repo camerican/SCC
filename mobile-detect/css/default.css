@@ -1,0 +1,30 @@
+.box {
+  width:200px;
+  height:200px;
+  background-size:cover;
+  position:relative;
+  display:inline-block;
+  cursor:pointer;
+}
+.box h2 {
+  opacity: 0;
+  background-color:rgba(155,155,155,0);
+  transition: 1s linear;
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  text-align:center;
+  margin:0;
+}
+.box:hover h2,
+.mobile .box h2 {
+  opacity:1;
+  background-color:rgba(155,155,155,1);
+}
+#box1 {
+  background-image:url(http://croissantandco.com/wp-content/uploads/cacd-003.png);
+}
+#box2 {
+  background-image:url(http://www-tc.pbs.org/food/wp-content/blogs.dir/2/files/2013/01/sandwiches-2.jpg);
+}
